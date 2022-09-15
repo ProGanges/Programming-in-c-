@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int a,b;
+	    cin>>a>>b;
+	    int l=1;
+	    int k = l;
+	    if(k>a)
+	    {
+	        cout<<"Bob"<<endl;
+	       
+	    }
+	    
+	    int bob = 2;
+	    int m=bob;
+	    if(m>b)
+	    {
+	        cout<<"Limak"<<endl;
+
+	    }
+	   while(k<=a&&m<=b)
+	    {
+	        l=bob+1;
+	        k=k+l;
+	        if(k>a)
+	        {
+	            cout<<"Bob"<<endl;
+	            break;
+	        }
+	        bob = l+1;
+	        m=m+bob;
+	        if(m>b)
+	        {
+	            cout<<"Limak"<<endl;
+	            break;
+	        }
+	    }
+	    
+	}
+	return 0;
+}
