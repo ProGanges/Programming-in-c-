@@ -1,0 +1,41 @@
+#include <iostream>
+#include<algorithm>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,b;
+	    cin>>n>>b;
+	    int w[n],h[n],p[n],k[n];
+	    for(int i=0;i<n;i++)
+	    {
+	        cin>>w[i]>>h[i]>>p[i];
+	    }
+	    for(int i=0;i<n;i++)
+	    {
+	        if(p[i]<=b)
+	        {
+	            k[i]=w[i]*h[i];
+	        }
+	        else
+	        {
+	            k[i]=0;
+	        }
+	    }
+	   int l = *max_element(k,k+n);
+	   if(l>0)
+	   {
+	       int j=max_element(k,k+n)-k;
+	       cout<<w[j]*h[j]<<endl;
+	   }
+	   else
+	   {
+	       cout<<"no tablet"<<endl;
+	   }
+	}
+	return 0;
+}
