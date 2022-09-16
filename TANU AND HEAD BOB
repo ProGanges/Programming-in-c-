@@ -1,0 +1,41 @@
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n;
+	    cin>>n;
+	    char a[n];
+	    for(int i=0;i<n;i++)
+	    {
+	        cin>>a[i];
+	    }
+	    int y=0,j=0;
+	    for(int i=0;i<n;i++){
+	        if(a[i]=='Y'){
+	            y++;
+	        }
+	        else if(a[i]=='I'){
+	            j++;
+	        }
+	       
+	    }
+	    if(y==0&&j>0){
+	        cout<<"INDIAN"<<endl;
+	    }
+	    else if(y>0&&j==0){
+	        cout<<"NOT INDIAN"<<endl;
+	    }
+	    else
+	    {
+	        cout<<"NOT SURE"<<endl;
+	    }
+	    
+	}
+	return 0;
+}
